@@ -26,7 +26,7 @@ def info_render_pdf_view(request, *args, **kwargs):
     # for downloading
     # response['Content-Disposition'] = 'attachment; filename="report.pdf"'
     # for previewing
-    response['Content-Disposition'] = 'filename="report.pdf"'
+    response['Content-Disposition'] = 'filename="certificate.pdf"'
     # find the template and render it.
     template = get_template(template_path)
     html = template.render(context)
@@ -50,7 +50,7 @@ def render_pdf_download(request, *args, **kwargs):
     # Create a Django response object, and specify content_type as pdf
     response = HttpResponse(content_type='application/pdf')
     # for downloading
-    response['Content-Disposition'] = 'attachment; filename="report.pdf"'
+    response['Content-Disposition'] = 'attachment; filename="certificate.pdf"'
     # for previewing
     # response['Content-Disposition'] = 'filename="report.pdf"'
     # find the template and render it.
