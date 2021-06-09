@@ -1,1 +1,1 @@
-web: gunicorn certificate_generator
+web: gunicorn certificate_generator.wsgi --log-file -
