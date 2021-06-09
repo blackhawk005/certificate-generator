@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <title>CERTIFICATE OF {{user.name}}</title>
+        <style type='text/css'>
+            /*@import url('https://fonts.googleapis.com/css?family=Permanent+Marker')*/
+            @page {
+                size: 11in 7.5in;
+                margin: 2cm;
+            }
+            body, html {
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                color: black;
+                display: table;
+                font-family: Georgia, serif;
+                font-size: 24px;
+                text-align: center;
+            }
+            img{
+                object-fit: contain;
+                margin-bottom: 30px;
+            }
+            .container {
+                border: 20px solid tan;
+                width: 750px;
+                height: 563px;
+                display: table-cell;
+                vertical-align: middle;
+            }
+            .logo {
+                color: tan;
+            }
+            
+            .p{
+                margin-left: 10px;
+            }
+
+            .marquee {
+                color: tan;
+                font-size: 48px;
+                margin-top: 30px;
+                
+            }
+            .marquee2 {
+                color: tan;
+                font-size: 28px;
+            }
+            .assignment {
+                margin: 20px;
+            }
+            .person {
+                font-size: 32px;
+                font-style: italic;
+                margin: 20px auto;
+                width: 400px;
+            }
+            .reason {
+                margin: 20px;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <div class="container">
+            <div class="logo">
+                <img src='media/{{user.logo}}' width="90px", height="70px">
+            </div>
+            <div class="marquee">
+                Certificate
+            </div>
+            <div class="marquee2">
+                of {{user.certificate_class}}
+            </div>
+
+            <div class="assignment">
+                This certificate is to certify that
+            </div>
+
+            <div class="person">
+                {{user.name}}
+            </div>
+
+            <div class="reason">
+                {{user.description}}
+            </div>
+            <div>
+                under the guidance of {{user.organizer_name}}
+            </div>
+            <div>
+                at {{user.organization_name}}
+            </div>
+        </div>
+    </body>
+</html>

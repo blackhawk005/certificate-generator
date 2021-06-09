@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+    HOME
+{% endblock title %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'template.css' %}">
+{% endblock link %}
+
+{% block content %}
+<br>
+<div class="container">
+    {% for user in object_list %}
+        {{ user }}<br><br>
+        <a href="{% url 'info:user-pdf-view' user.pk %}"><button class="btn btn-light">view</button></a>
+        <a href="{% url 'info:user-pdf-download' user.pk %}"><button class="btn btn-outline-light">download</button></a>
+        <br>
+        <hr>
+    {% endfor %}  
+</div>
+      
+{% endblock content %}
