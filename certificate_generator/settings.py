@@ -26,7 +26,7 @@ SECRET_KEY = 'rb8$%xm_r&u4l)ewvjda%#k_g4%d+#*0@5$$15do0!v+ru25u$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['certificate-generator-sd.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
